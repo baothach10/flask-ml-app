@@ -1,0 +1,19 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+<section>
+  <div class="detail-container">
+    <div class="detail-item">
+      <h2>Job Detail</h2>
+    </div>
+    <div class="detail-item">
+      {% for field in job_dict.keys(): %}
+      <h3>{{field}}: </h3><p>{{job_dict[field]}}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div class="btn-container">
+  <a href="javascript:history.back()">Go Back</a>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'navbar.html' %}
+{% block body %}
+<section>
+  <div class="new-job-container">
+    <div class="new-job-item">
+      <h2>Create New Job Listing</h2>
+    </div>
+    <div class="new-job-item">
+      <form action="/create_job" method="POST">
+        <label for="job_title" class="job-detail-label">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" required><br><br><br>
+
+        <label for="company" class="job-detail-label">Company:</label>
+        <input type="text" id="company" name="company" required><br><br><br>
+    
+        <label for="job_description" class="job-detail-label">Job Description:</label><br>
+        <textarea id="job_description" name="job_description" rows="4" cols="50" required></textarea><br><br><br>
+    
+        <label for="salary" class="job-detail-label">Salary:</label>
+        <input type="number" id="salary" name="salary" required> AUD<br><br><br>
+        
+        <label for="other_information" class="job-detail-italic-label">Please add more information if needed</label><br>
+        <label for="other_information_label" class="job-detail-label"><input type="text" id="other_information_label" name="other_information_label" value="Other information">:</label><br>
+        <textarea id="other_information" name="other_information" rows="4" cols="50">None</textarea><br><br><br>
+        
+        <input type="reset" value="Reset">
+        <input type="submit" value="Create">
+      </form>
+    </div>
+  </div>
+</section>
+<div class="btn-container">
+  <a href="javascript:history.back()">Go Back</a>
+</div>
+{% endblock %}

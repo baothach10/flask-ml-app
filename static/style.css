@@ -1,0 +1,201 @@
+
+/* Initial Style */
+body, textarea {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+select {
+    margin: 0 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Header Style */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    margin: auto;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    margin: auto;
+    display: flex;
+}
+nav li {
+    margin: 0 130px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+nav ul li:hover {
+    font-size: large;
+    transition: 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+}
+
+/* Main Style */
+
+main {
+    position: relative;
+    height: max-content;
+}
+
+/* Style for index.html file */
+
+.search-engine {
+    display: flex;
+    margin: auto;
+}
+
+.search-form {
+    padding: 10px 170px;
+    margin-top: 15px;
+}
+
+.job-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.job-item {
+    margin: auto;
+    text-align: center;
+    height: fit-content;
+    width: 700px;
+    border-style: solid;
+    margin: 5px 0;
+}
+
+.job-descrition-container {
+    margin: 20px 50px;
+}
+
+.job-description {
+    width: 600px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.title-container {
+    margin: 10px;
+}
+
+.title-container p {
+    font-style: italic;
+}
+
+.title-container h3 {
+    text-decoration: underline;
+}
+
+.job-item:hover {
+    font-size: large;
+    transition: 0.3s ease-in-out;
+}
+
+/* Job Detail Page */
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.detail-item {
+    height: fit-content;
+    width: 1400px;
+    margin: 10px 25px;
+}
+
+.detail-item h2 {
+    text-align: center;
+}
+
+.btn-container {
+    position: relative;
+    display: flex;
+    margin: 10px 25px;
+    align-items: center;
+}
+
+.btn-container a {
+    padding: 10px 20px;
+    margin: auto;
+    border: #333 solid;
+}
+
+.btn-container a:hover {
+    color: white;
+    background-color: #333;
+}
+
+.btn-container:hover {
+    font-size: large;
+    transition: 0.3s ease-in-out;
+}
+
+/* Employer and job detail final page */
+
+.new-job-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-job-item {
+    margin: 25px;
+}
+
+.job-detail-label {
+    font-weight: bold;
+}
+
+.job-detail-italic-label {
+    font-style: italic;
+}
+
+/* Footer Style */
+
+footer {
+    height: 80px;
+    text-align: center;
+    margin: 30px 0 0 0;
+    background-color: #333;
+    color: #fff;
+    bottom: 0;
+}
+
+.footer-div {
+    padding: 10px 10px;
+}

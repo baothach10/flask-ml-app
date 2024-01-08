@@ -1,0 +1,43 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+<section>
+  <div class="new-job-container">
+    <div class="new-job-item">
+      <h2>New Job Listing Confirmation</h2>
+    </div>
+    <div class="new-job-item">
+      <form action="/save_job" method="POST">
+        <label for="job_title" class="job-detail-label">Job Title:</label>
+        <input type="hidden" id="job_title" name="job_title" value="{{job_dict['Title']}}">
+        <p>{{job_dict['Title']}}</p><br>
+
+        <label for="company" class="job-detail-label">Company:</label>
+        <input type="hidden" id="company" name="company" value="{{job_dict['Company']}}">
+        <p>{{job_dict['Company']}}</p><br>
+    
+        <label for="job_description" class="job-detail-label">Job Description:</label><br>
+        <input type="hidden" id="job_description" name="job_description" value="{{job_dict['Description']}}">
+        <p>{{job_dict['Description']}}</p><br><br>
+    
+        <label for="salary" class="job-detail-label">Salary:</label>
+        <input type="hidden" id="salary" name="salary" value="{{job_dict['Salary']}}"><br>
+        <p>{{job_dict['Salary']}} AUD</p><br><br>
+        
+        <label for="other_information" class="job-detail-italic-label">Please add more information if needed</label><br>
+        <label for="other_information_label" class="job-detail-label"><input type="hidden" id="other_information_label" name="other_information_label" value="{{other_info_label}}">{{other_info_label}}:</label><br>
+        <input type="hidden" id="other_information" name="other_information" value="{{job_dict[other_info_label]}}">
+        <p>{{job_dict[other_info_label]}}</p><br><br>
+    
+        <label for="category" class="job-detail-label">Category:</label><br>
+        <input type="text" id="category" name="category" value="{{predicted_category}}"><br>
+        <p class="job-detail-italic-label">Note: This is the predicted category based on what you have provided, you can overwrite it by typing into it</p><br>
+        <input type="submit" value="Save">
+      </form>
+    </div>
+  </div>
+</section>
+<div class="btn-container">
+  <a href="javascript:history.back()">Go Back</a>
+</div>
+{% endblock %}

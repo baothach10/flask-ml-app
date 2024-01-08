@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>A2 Milestone 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+          <nav>
+              <ul>
+                  <li><a href="../employer.html">Employer Site</a></li>
+                  <li><a href="../index.html">Job Seeker Site</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page content -->
+      {% block body %}
+      {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-div">
+        <p>&copy; Reserved For COSC2820: Advanced Programming In Data Science Course Only</p>
+      </div>
+    </footer>
+  </body>
+</html>

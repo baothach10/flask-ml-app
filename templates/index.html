@@ -1,0 +1,45 @@
+{% extends 'navbar.html' %}
+
+{% block body %}
+<section class="search-engine">
+  <form action="/search" method="GET" class="search-form">
+    <label for="search">Search by keywords:</label>
+    <input type="text" id= "search" name="keyword" required placeholder="Enter keyword here...">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Search">
+  </form>
+  <form action="/filter_job" id="optionForm" class="search-form" method="GET">
+    <label for="select_option">Filter by job categories:</label>
+    <select id="select_option" name="selected_category">
+      <option value="All">All</option>
+      <option value="Accounting_Finance">Accounting Finance</option>
+      <option value="Sales">Sales</option>
+      <option value="Healthcare_Nursing">Healthcare Nursing</option>
+      <option value="Engineering">Engineering</option>
+    </select>
+    <input type="submit" value="Confirm">
+  </form>
+</section>
+<section>
+  <div class="job-list-container">
+    <div>
+      <h2>Here are the jobs we have found that match your option:</h2>
+    </div>
+    {% for job in jobs %}
+    <div class="job-item">
+      <a href="/jobDetail/{{job['ID']}}">
+        <div>
+          <div class="title-container">
+            <h3>{{job['Title']}}</h3>
+            <p>{{job['Company']}}</p>
+          </div>
+          <div class="job-descrition-container">
+            <p class="job-description">{{job['Description']}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

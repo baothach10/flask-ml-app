@@ -240,3 +240,6 @@ def save():
     save_data(job_dict)
     # Redirect back to the job display page
     return redirect('/index.html')
+
+if __name__ == '__main__':
+    app.run()
